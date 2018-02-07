@@ -1,0 +1,8 @@
+add_lunch_combo rk3399_firefly_box-userdebug
+add_lunch_combo rk3399_firefly_box-user
+add_lunch_combo rk3399_firefly_edp_box-userdebug
+add_lunch_combo rk3399_firefly_edp_box-user
+add_lunch_combo rk3399_firefly_mipi_box-userdebug
+add_lunch_combo rk3399_firefly_mipi_box-user
+add_lunch_combo rk3399_firefly_aio_box-userdebug
+add_lunch_combo rk3399_firefly_aio_box-user
