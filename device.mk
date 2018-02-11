@@ -19,7 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 PRODUCT_PACKAGES += \
     memtrack.$(TARGET_BOARD_PLATFORM) \
-    WallpaperPicker \
+    WallpaperPickerFirefly \
     Launcher3
 
 #enable this for support f2fs with data partion
