@@ -18,7 +18,7 @@
 -include vendor/rockchip/rk3399/BoardConfigVendor.mk
 -include device/rockchip/common/BoardConfig.mk
 
-TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
+#TARGET_NO_KERNEL := true
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -81,3 +81,5 @@ ENABLE_CPUSETS := true
 PRODUCT_HAVE_OPTEE ?= false
 
 BOARD_USE_SPARSE_SYSTEM_IMAGE := true
+
+PRODUCT_HAS_OWN_BT_CONF := true

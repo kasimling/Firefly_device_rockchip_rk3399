@@ -34,12 +34,12 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 BOARD_USB_ALLOW_DEFAULT_MTP := true
 
 # debug-logs
-ifneq ($(TARGET_BUILD_VARIANT),user)
-MIXIN_DEBUG_LOGS := true
-endif
+#ifneq ($(TARGET_BUILD_VARIANT),user)
+#MIXIN_DEBUG_LOGS := true
+#endif
 
 #for drm widevine
-BUILD_WITH_WIDEVINE := true
+#BUILD_WITH_WIDEVINE := true
 
 #for ddr var support
 BOARD_DDR_VAR_ENABLED := true
@@ -48,3 +48,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.screen.landscape.xml:system/etc/permissions/android.hardware.screen.landscape.xml \
 	frameworks/native/data/etc/android.hardware.screen.portrait.xml:system/etc/permissions/android.hardware.screen.portrait.xml \
 	frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml
+
+ifneq ($(TARGET_NO_KERNEL), true)
+TARGET_PREBUILT_KERNEL := device/rockchip/rk3399/kernel_edp_box
+endif

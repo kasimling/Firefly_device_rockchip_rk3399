@@ -19,7 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 PRODUCT_PACKAGES += \
     memtrack.$(TARGET_BOARD_PLATFORM) \
-    WallpaperPicker \
+    WallpaperPickerRK \
     Launcher3 \
     RetailDemo
 
@@ -114,12 +114,12 @@ endif
 
 
 # debug-unresponsive
-ifneq ($(TARGET_BUILD_VARIANT),user)
-ADDITIONAL_DEFAULT_PROPERTIES += sys.dropbox.max_size_kb=4096
+#ifneq ($(TARGET_BUILD_VARIANT),user)
+#ADDITIONAL_DEFAULT_PROPERTIES += sys.dropbox.max_size_kb=4096
 
-ADDITIONAL_DEFAULT_PROPERTIES += sys.dump.binder_stats.uiwdt=1
-ADDITIONAL_DEFAULT_PROPERTIES += sys.dump.binder_stats.anr=1
-endif
+#ADDITIONAL_DEFAULT_PROPERTIES += sys.dump.binder_stats.uiwdt=1
+#ADDITIONAL_DEFAULT_PROPERTIES += sys.dump.binder_stats.anr=1
+#endif
 
 ifeq ($(MIXIN_DEBUG_LOGS),true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/debug/init.logs.rc:root/init.logs.rc
